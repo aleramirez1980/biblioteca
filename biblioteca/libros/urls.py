@@ -2,9 +2,7 @@ from django.urls import path
 from libros import views
 
 urlpatterns = [
-    path('/', views.inicio),
-    path('cursos/', views.cursos),
-    path('profesores/', views.profesores),
-    path('estudiantes/', views.estudiantes),
-    path('entregables/', views.entregables)
+    path('/', views.inicio, name="Inicio"),
+    path('libros/', views.libro, name="Libros"),
+    path('agregarlibro/', views.agregarlibro, name="Agregar Libro"),
 ]
