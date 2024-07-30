@@ -1,0 +1,15 @@
+{% extends 'libros/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+
+{% for libro in libros %}
+    <li>libro: {{ libros.nombre }} | Autor: {{ libros.autor }}</li>
+{% endfor %}
+
+
+{% endblock main %}
