@@ -1,0 +1,20 @@
+
+{% extends 'libros/base.html' %}
+
+{% load static %}
+
+{% block title %} agregar_libro {% endblock title %}
+
+{% block main %}
+<!-- action: representa la url a la que nos va a re-dirigir y enviar la info.
+    Tiene prioridad por sobre la redirección que podamos colocar en views.py -->
+    <form action="agregar_libro" method="POST">
+        {% csrf_token %}
+        <p>Nombre: <input type="text" name="nombre"></p>
+        <p>Autor: <input type="text" name="autor"></p>
+        <p>Año: <input type="text" name="año"></p>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock main %}
